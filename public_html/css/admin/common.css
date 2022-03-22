@@ -1,0 +1,260 @@
+#content{
+    height: calc(100% - 48px);
+}
+#content .container {
+    max-width: unset;
+    height: 100%;
+}
+#content .container .content{
+    max-width: unset;
+    height: 100%;
+    position: relative;
+}
+#content .container .content .table-responsive{
+    height: calc(100% - 95px);
+    position: absolute;
+    top: 93px;
+    left: 0;
+    padding: 10px 2rem 2rem 2rem;
+    
+}
+#content .container .content .table-responsive.has_paginator{
+    height: calc(100% - 120px - 70px);
+}
+table.list-data{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+}
+table.list-data thead{
+    flex: 0 0 auto;
+    width: 100%;
+}
+table.list-data tbody{
+    flex: 1 1 auto;
+    overflow-y: auto;
+    display: block;
+}
+table.list-data tr{
+    width: 100%;
+}
+table.list-data thead,
+table.list-data tbody tr{
+    display: table;
+    table-layout: fixed;
+}
+table.list-data td, 
+table.list-data th{
+    padding: 1.2rem 1.5rem !important;
+}
+table.list-data td, 
+table.list-data th {
+    border-right: 0.1rem solid #e1e1e1;
+    display: table-cell;
+}
+.filter table thead th,
+table.list-data th {
+    background: #e4eff5;
+}
+
+table.list-data td:last-child, 
+table.list-data th:last-child{
+    border-right: 0;
+}
+/* tr:last-child td{
+    border-bottom: 0.1rem solid #e1e1e1;
+} */
+
+.content-title::after{
+    content: '';
+    clear: both;
+    height: 1px;
+}
+.content-title h3{
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#side {
+    width: 246px;
+    height: 100%;
+    padding-top: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #297ac6;
+    position: fixed;
+    left: -246px;
+    top: 0;
+    color: #fff;
+    z-index: 100;
+}
+.paginator {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.paginator a.button{
+    border: 1px solid #e4eff5;
+    margin: 0 5px;
+    padding: 0 1rem;
+}
+.paginator a.page-current{
+    border: 0;
+    background: #e4eff5;
+    color: #000;
+}
+.paginator a.page-current:hover{
+    background: #e4eff5;
+}
+/* ステータス */
+.visi, .unvisi {
+	width:63px;
+}
+.visi a, 
+.unvisi a {
+	display:block;
+	text-align:center;
+	line-height:25px;
+	color:#ffffff;
+	text-decoration:none;
+}
+.visi {
+    background:url(/img/visi.png) no-repeat;
+}
+.unvisi {
+    background:url(/img/unvisi.png) no-repeat;
+}
+
+/* 確認 */
+.prev {
+	display:block;
+	margin:2px;
+	font-size:0;
+	text-indent:-9999px;
+}
+.prev a {
+	display:block;
+	width:22px;
+	height:22px;
+	text-decoration:none;
+	background:url(/img/prev.gif) no-repeat;
+}
+.prev a:hover {background-position:0 -22px;}
+.prev a:active {background-position:0 -44px;}
+
+/* 順序の変更 */
+ul.ctrlis {
+	display:block;
+	width:100%;
+	margin:0 auto;
+	list-style-type:none;
+}
+ul.ctrlis::after {
+	display:block;
+	height: 1;
+    clear: both;
+    content: "";
+}
+ul.ctrlis li {
+	display:block;
+	margin:2px;
+	float:left;
+	font-size:0;
+	text-indent:-9999px;
+}
+ul.ctrlis li a, ul.ctrlis li.non {
+	display:block;
+	width:22px;
+	height:22px;
+	text-decoration:none;
+}
+.cttop a, .ctup a, .ctdown a, .ctend a {
+	background:url(/img/ctr.gif) no-repeat;
+}
+.ctup a {background-position:-22px 0;}
+.ctdown a {background-position:-44px 0;}
+.ctend a {background-position:-66px 0;}
+
+.cttop a:hover {background-position:0 -22px;}
+.ctup a:hover {background-position:-22px -22px;}
+.ctdown a:hover {background-position:-44px -22px;}
+.ctend a:hover {background-position:-66px -22px;}
+
+.cttop a:active {background-position:0 -44px;}
+.ctup a:active {background-position:-22px -44px;}
+.ctdown a:active {background-position:-44px -44px;}
+.ctend a:active {background-position:-66px -44px;}
+
+/* column */
+.col_no{
+    width: 4em;
+    text-align: center;
+}
+.col_status{
+    width: 7em;
+    text-align: center;
+}
+.col_date{
+    width: 9em;
+    text-align: center;
+}
+.col_verify{
+    width: 4em;
+    text-align: center;
+}
+.col_sort{
+    width: 10em;
+    text-align: center;
+}
+
+.filter {
+    padding-bottom: 15px;
+}
+
+.filter th,
+.filter td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.filter-status-label {
+    width: 90px;
+}
+
+.filter-status {
+    width: 115px;
+}
+
+.filter-public-date-label {
+    width: 62px;
+}
+
+.filter-public-date {
+    width: 200px;
+}
+
+.filter-text-short-label{
+    width: 85px;
+}
+
+.filter-text-short{
+    width: 202px;
+}
+
+.filter-button{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.filter-button .button,
+.filter-button button{
+    margin: 0;
+}
+.paginator p{
+    text-align: center;
+}
